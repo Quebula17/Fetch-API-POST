@@ -12,7 +12,7 @@ function validEmail(email) {
   
     if (!validEmail(emailInput)) {
       emailError.innerHTML = "Please enter a valid email address";
-      return;
+      event.preventDefault();
     } else {
       emailError.innerHTML = "";
     }
@@ -23,7 +23,7 @@ function validEmail(email) {
   
     if (passwordInput !== confirmPasswordInput) {
       passwordError.innerHTML = "Passwords must match";
-      return;
+      event.preventDefault();
     } else {
       passwordError.innerHTML = "";
     }
@@ -45,12 +45,22 @@ function validEmail(email) {
   
     fetch('https://reqres.in/api/login', options)
       .then((response) => {
+        if(response.status !== 200){
+          window.alert('Invalid Credentials')
+        }
+        else{
+          window.alert('Form was submitted successfully')
+          document.getElementById('sign-in-form').reset()
+        }
         console.log(response.status)
         return response.json();
       })
       .then((json) => {
         console.log(json);
-        document.getElementById('sign-in-form').reset();
+        // document.getElementById('sign-in-form').reset();
+      })
+      .catch(error => {
+        console.log(error);
       })
 
   
