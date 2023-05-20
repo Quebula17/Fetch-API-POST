@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+.input{
+    background: rgba(237, 245, 244, 1);
+    padding: 8px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color:rgba(0, 0, 0, 1);
+    font-family: 'Outfit', sans-serif;
+    border: none;
+    border-radius: 6px;
+
+}
+
+#form-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+#sign-in-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.label{
+    font-family: 'Outfit', sans-serif;
+    color: rgba(51, 51, 51, 1);
+    font-size: 1rem;
+
+}
+
+#submit-btn{
+    background: rgba(218, 75, 38, 1);
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 30px;
+}
+
+#title{
+    color: black;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    
+}
+
+#hr{
+    border: 1px solid rgba(215, 222, 221, 1)
+}
+
+#hr-div{
+    margin-bottom: 30px;
+}
+
+.error{
+    font-family: 'Outfit', sans-serif;
+    color: red;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
